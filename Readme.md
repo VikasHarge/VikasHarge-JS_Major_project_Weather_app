@@ -1,11 +1,10 @@
-# JS_Mini_Projects_login_auth
-login authentication using JS
+# JS_Major_project_Weather_app
+  Weather app
 
-## singup and login authentication page
+## Shows weather of around 200000 cities world wide
 
-this is singup and login authentication page JS project.
-this webpage is fully responsive for both tablate (1024px)
-and mobile phones (600px).
+This is the weather forcast app, which shows the weather information of
+around 200000 cities across the world, this is an API based project,
 
 ## Over View of Webpage
 
@@ -17,17 +16,9 @@ and mobile phones (600px).
 - CSS
 - JavaScript
 
-## Colors I have used in project
-
-| Color Name            | Color Code                                                               |
-| ----------------- | ------------------------------------------------------------------ |
-|   --color-primary-white | white ;
-|   --color-primary-blue | rgb(0, 58, 92);
-|   --color-primary-error | red;
-|   --color-primary-success | green;
-|   --color-primary-gray | rgba(128, 128, 128, 0.459);
-
 <br>
+
+## API Used from [@openweathermap](https://openweathermap.org/api)
 
 
 
@@ -35,8 +26,8 @@ and mobile phones (600px).
 
 This webpage is deployed on Netlify
 <br>
-### singup and login authentication page
-[Click here to visit](https://app.netlify.com/sites/splendorous-blini-9be87c/deploys)
+### The Weather App 
+[Click here to visit](https://luminous-snickerdoodle-c917ca.netlify.app/)
 
 
 ## Features
