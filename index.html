@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- // fontawesome -->
+    <script src="https://kit.fontawesome.com/355e58a8ac.js" crossorigin="anonymous"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+
+    <link rel="icon" type="image" href="./media/icon2.png">
+    <title>Weather App</title>
+</head>
+<body>
+    <!-- tem indication area start -->
+    <div class="weather_app">
+        <div class="container">
+            <div class="brand">
+                <h2>The Weather</h2>
+                <h6>by Vikas Harge</h6>
+            </div>
+            <div class="temp_container">
+                <h1 class="temp">16&#176;</h1>
+                <div class="city_time">
+                    <h1 class="name">Mumbai</h1>
+                    <small class="DateTime">
+                        <span class="time"></span>
+                        <span id="date"></span>
+                    </small>
+                </div>
+                <div class="weather">
+                    <img 
+                       src="" 
+                       alt="weather_symbol"
+                       class="icon"
+                       width="70"
+                       height="70"
+                    />
+                    <span class="condition">Cloudy</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- panel start -->
+        <div class="panel">
+            <form id="locationInput">
+                <input 
+                    type="text" 
+                    class="search"
+                    placeholder="Search Location"
+                />
+                <button class="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+            <ul class="cities">
+                <li class="city">Mumbai</li>
+                <li class="city">Pune</li>
+                <li class="city">Chennai</li>
+                <li class="city">Delhi</li>
+            </ul>
+            <ul class="details">
+                <h4 class="weather_details" >Weather Details</h4>
+                <li>
+                    <span>Cloudy</span>
+                    <span class="cloud">89%</span>
+                </li>
+                <li>
+                    <span>Humidity</span>
+                    <span class="humidity">89%</span>
+                </li>
+                <li>
+                    <span>Wind</span>
+                    <span class="windSpeed">89%</span>
+                </li>
+            </ul>
+            <div >
+                <p class="copyRight">&copy;Vikas Harge</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./index.js"></script>
+
+    
+</body>
+</html>
