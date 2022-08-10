@@ -78,12 +78,23 @@ h1, h3{
 
 .city_time h1 {
     margin: 0;
-    margin-bottom: 0.2em;
     font-size: 2.5em;
+    padding-bottom: 0.1em;
+}
+
+.city_time {
+    margin: 0;
+    border-right: 1px solid rgba(116, 116, 116, 0.9);
+    padding: 0.7em 1em;
 }
 
 .time {
     font-size: 1em;
+    padding-bottom: 0.2em;
+}
+
+#date {
+    padding-bottom: 0.8em;
 }
 
 .DateTime{
@@ -95,6 +106,8 @@ h1, h3{
 .temp {
     font-size: 6em;
     margin: 0;
+    border-right: 1px solid rgba(116, 116, 116, 0.9);
+    padding-right: 10px;
 }
 
 .temp_container {
@@ -110,6 +123,8 @@ h1, h3{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 0;
+    padding-left: 1em;
 }
 
 .weather img {
@@ -117,7 +132,7 @@ h1, h3{
 }
 
 .condition {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     padding-top: 0.5em;
     font-size: 1.2em;
 }
@@ -230,7 +245,7 @@ h1, h3{
     }
 
     .panel{
-        margin-top: 5em  ;
+        margin-top: 4.5em  ;
     }
 
     .container > div {
@@ -270,6 +285,19 @@ h1, h3{
         padding: 1em;
         border-radius: 1em;
         margin: 0 !important;
+    }
+
+    .weather {
+        align-items: flex-start;
+    }
+
+    .city_time {
+        padding-bottom: 0;
+        border: none;
+    }
+
+    .temp {
+        border: none;
     }
 }
 

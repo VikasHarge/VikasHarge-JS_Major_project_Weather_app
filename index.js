@@ -29,6 +29,7 @@ let cityInput = "Thane";
 
 
 // listes cities
+
 cities.forEach((city)=>{
     city.addEventListener('click', (e) => {
         cityInput = e.target.innerHTML;
@@ -39,7 +40,9 @@ cities.forEach((city)=>{
     })
 })
 
+
 // city from input
+
 btn.addEventListener('click', (e)=>{
 
     e.preventDefault()
@@ -51,6 +54,7 @@ btn.addEventListener('click', (e)=>{
         app.style.opacity = "0"
 
         fetchWeatherData();
+
         search.value=""
 
     }
@@ -75,43 +79,29 @@ btn.addEventListener('click', (e)=>{
     })();
 
 
-    // for current date
+// for current date
 
-    (function setDate(){
+    const dateString = new Date().toDateString()
 
-        const date = new Date();
-   
-        const month = setMonth[date.getMonth()];
-        const newDay = date.getDate()
-        const year = date.getFullYear()
-
-        const completeDate = `${newDay} ${month} ${year}`;
-        dateOutput.innerHTML = completeDate
-
-    })();
-
+    dateOutput.innerHTML = dateString;
 
 
 // To show date in AM PM format
 
     setInterval(()=>{
+      
+        const newDate = new Date()
 
-        let date = new Date();
-        let hours = date.getHours()
-        let minutes = date.getMinutes()
-        let secound = date.getSeconds()
-
+        let hours = newDate.getHours()
 
         var ampm = hours >=12 ? "PM" : "AM";
-        hours = hours % 12;
-        hours = hours ? hours : 12;
-        minutes = minutes < 10 ? '0'+minutes : minutes;
-        secound = secound <10 ? '0'+ secound : secound;
-        var strTime = hours + "  :  " + minutes + "  :  " + secound + "  :  " + ampm;
-        timeOutput.innerHTML = strTime
+
+        const dateDisplayStr = newDate.toTimeString().substring(0, 8)
+        const dateDisplay = dateDisplayStr + " " + ampm;
+
+        timeOutput.innerHTML = dateDisplay;
 
     }, 1000)
-
 
 
 
@@ -136,7 +126,6 @@ function fetchWeatherData(){
         // Icons
 
         const symbol = data.weather[0].main
-        console.log(symbol);
 
         if(isDay){
             icon.src = `./media/weather/weather/64x64/day/${symbol}.png`
