@@ -88,20 +88,43 @@ btn.addEventListener('click', (e)=>{
 
 // To show date in AM PM format
 
-    setInterval(()=>{
-      
+setInterval(()=>{
+          
         const newDate = new Date()
 
-        let hours = newDate.getHours()
+        let date = new Date();
+        let hours = date.getHours()
+        let minutes = date.getMinutes()
+        let secound = date.getSeconds()
 
         var ampm = hours >=12 ? "PM" : "AM";
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? '0'+minutes : minutes;
+        secound = secound <10 ? '0'+ secound : secound;
+        var strTime = hours + "  :  " + minutes + "  :  " + secound + "  :  " + ampm;
+        timeOutput.innerHTML = strTime
+    
+       }, 1000)
 
-        const dateDisplayStr = newDate.toTimeString().substring(0, 8)
-        const dateDisplay = dateDisplayStr + " " + ampm;
 
-        timeOutput.innerHTML = dateDisplay;
 
-    }, 1000)
+
+
+    // setInterval(()=>{
+      
+    //     const newDate = new Date()
+
+    //     let hours = newDate.getHours()
+
+    //     var ampm = hours >=12 ? "PM" : "AM";
+
+    //     const dateDisplayStr = newDate.toTimeString().substring(0, 8)
+    //     const dateDisplay = dateDisplayStr + " " + ampm;
+
+    //     timeOutput.innerHTML = dateDisplay;
+
+    // }, 1000)
 
 
 
