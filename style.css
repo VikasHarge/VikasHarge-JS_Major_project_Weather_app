@@ -265,8 +265,8 @@ h1, h3{
     
     .condition {
         margin-bottom: 0;
-        padding-top: 0.5em;
         font-size: 1.2em;
+        padding: 0 !important; 
     }
 
     .cities{
