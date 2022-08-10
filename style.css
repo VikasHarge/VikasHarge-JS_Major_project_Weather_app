@@ -17,6 +17,7 @@ h1, h3{
 .weather_app{
     min-height: 100vh;
     background-image: url(./media/day/cloudy.jpg);
+    /* background-image: url(./media/day/Nashik.jpeg); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

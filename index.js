@@ -32,6 +32,9 @@ let cityInput = "Thane";
 
 cities.forEach((city)=>{
     city.addEventListener('click', (e) => {
+
+        search.style.borderBottom = "1px solid #ccc"
+
         cityInput = e.target.innerHTML;
 
         app.style.opacity = "0"
@@ -49,16 +52,21 @@ btn.addEventListener('click', (e)=>{
 
     if(search.value.length == 0){
         alert("please enter city name")
+        search.style.borderBottom = "1px solid red"
     } else {
         cityInput = search.value;
         app.style.opacity = "0"
 
+        search.style.borderBottom = "1px solid #ccc"
+
+
         fetchWeatherData();
 
         search.value=""
-
     }
 })
+
+search.style.borderBottom = "1px solid #ccc"
 
 
 
@@ -109,25 +117,6 @@ setInterval(()=>{
 
 
 
-
-
-    // setInterval(()=>{
-      
-    //     const newDate = new Date()
-
-    //     let hours = newDate.getHours()
-
-    //     var ampm = hours >=12 ? "PM" : "AM";
-
-    //     const dateDisplayStr = newDate.toTimeString().substring(0, 8)
-    //     const dateDisplay = dateDisplayStr + " " + ampm;
-
-    //     timeOutput.innerHTML = dateDisplay;
-
-    // }, 1000)
-
-
-
 // API data Fetch function
 
 function fetchWeatherData(){
@@ -161,15 +150,31 @@ function fetchWeatherData(){
 
         if(String(data.name) === "Mumbai"){
             app.style.backgroundImage = `url(./media/day/Mumbai.jpg)`
-        } else if(String(data.name) === "Pune")  {
+        } else if(String(data.name) === "Pune"){
             app.style.backgroundImage = `url(./media/day/Pune.jpg)`
-        } else if(String(data.name) === "Chennai")  {
+        } else if(String(data.name) === "Chennai"){
             app.style.backgroundImage = `url(./media/day/Chennai.jpg)`
-        } else if(String(data.name) === "Delhi")  {
+        } else if(String(data.name) === "Delhi"){
             app.style.backgroundImage = `url(./media/day/Delhi.jpg)`
+        } else if(String(data.name) === "Agra"){
+            app.style.backgroundImage = `url(./media/day/Agra.jpg)`
+        } else if(String(data.name) === "Satara"){
+            app.style.backgroundImage = `url(./media/day/Satara.jpg)`
+        } else if(String(data.name) === "Sangli"){
+            app.style.backgroundImage = `url(./media/day/Sangli.jpg)`
+        } else if(String(data.name) === "Kolhāpur"){
+            app.style.backgroundImage = `url(./media/day/Kolhāpur.jpg)`
+        } else if(String(data.name) === "Nashik"){
+            app.style.backgroundImage = `url(./media/day/Nashik.jpeg)`
+        } else if(String(data.name) === "Phaltan"){
+            app.style.backgroundImage = `url(./media/day/Phaltan.jpg)`
         } else {
             app.style.backgroundImage = `url(./media/day/cloudy.jpg)`
         }
+
+        console.log(data.name);
+
+
 
         app.style.opacity = "1"
     })
@@ -183,6 +188,8 @@ function fetchWeatherData(){
 
 fetchWeatherData()
 app.style.opacity = "1"
+
+
 
 
 
