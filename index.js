@@ -120,8 +120,7 @@ setInterval(()=>{
 
 function fetchWeatherData(){
 
-    // fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=f9db659e83cbbf668ae1c5798bbfb316&units=metric`)
-    fetch(`https://www.googleapis.com/youtube/v3`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=f9db659e83cbbf668ae1c5798bbfb316&units=metric`)
     .then(response => response.json())
     .then(data => {
         
