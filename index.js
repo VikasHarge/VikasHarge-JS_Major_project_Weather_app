@@ -39,7 +39,6 @@ cities.forEach((city)=>{
 
         app.style.opacity = "0"
         fetchWeatherData();
-
     })
 })
 
@@ -121,11 +120,14 @@ setInterval(()=>{
 
 function fetchWeatherData(){
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=f9db659e83cbbf668ae1c5798bbfb316&units=metric`)
+    // fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&appid=f9db659e83cbbf668ae1c5798bbfb316&units=metric`)
+    fetch(`https://www.googleapis.com/youtube/v3`)
     .then(response => response.json())
     .then(data => {
         
-        // Data to show 
+        // Data to show
+        
+        console.log(data);
 
         temp.innerHTML = data.main.temp + "&#176;"
         nameOutput.innerHTML = data.name;
@@ -168,13 +170,11 @@ function fetchWeatherData(){
             app.style.backgroundImage = `url(./media/day/Nashik.jpeg)`
         } else if(String(data.name) === "Phaltan"){
             app.style.backgroundImage = `url(./media/day/Phaltan.jpg)`
+        } else if(String(data.name) === "Lonavala" || String(data.name) === "Lonavla"){
+            app.style.backgroundImage = `url(./media/day/Lonavala.jpg)`
         } else {
             app.style.backgroundImage = `url(./media/day/cloudy.jpg)`
         }
-
-        console.log(data.name);
-
-
 
         app.style.opacity = "1"
     })
