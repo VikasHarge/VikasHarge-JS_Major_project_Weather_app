@@ -14,10 +14,49 @@ h1, h3{
     font-weight: 400;
 }
 
+#blurScreen{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    z-index: 900;
+    opacity: 0.9;
+    transition: 500ms;
+}
+
+#indipendent{
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    transition: 500ms;
+}
+
+.inner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner img {
+    position: relative;
+    width: 150px;
+    border-radius: 50%;
+    z-index: 990;
+    transition: 500ms;
+}
+
+.inner img:hover {
+    transition: 500ms;
+    transform: scale(1.2);
+}
+
 .weather_app{
     min-height: 100vh;
-    background-image: url(./media/day/cloudy.jpg);
-    /* background-image: url(./media/day/Nashik.jpeg); */
+    background-image: url(./media/day/flag.jpg);
+    /* background-image: url(./media/day/kolhapur.png); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,6 +64,14 @@ h1, h3{
     position: relative;
     transition: 500ms;
     opacity: 1;
+}
+
+#logoTag span:nth-child(1) {
+    color: #fa6d1b;
+}
+
+#logoTag span:nth-child(3) {
+    color: rgb(0, 165, 0);
 }
 
 .weather_app::before {
@@ -66,6 +113,10 @@ h1, h3{
 .brand{
     display: flex;
     flex-direction: column ;
+}
+
+.brand img{
+    border-radius: 2px;
 }
 
 .brand h2{
@@ -300,16 +351,26 @@ h1, h3{
     .temp {
         border: none;
     }
+
+    .weather_app{
+        background-image: url(./media/day/mobile.jpg);   
+    }
 }
 
 @media screen and (max-width: 500px){
     html {
         font-size: 12px;
     }
+    .weather_app{
+        background-image: url(./media/day/mobile.jpg);   
+    }
 }
 
 @media screen and (max-height: 300px){
     .weather_app {
         min-height: 40em;
+    }
+    .weather_app{
+        background-image: url(./media/day/mobile.jpg);   
     }
 }
